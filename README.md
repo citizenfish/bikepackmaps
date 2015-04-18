@@ -1,4 +1,4 @@
-# UK Bike packing maps
+# UK Bikepacking maps
 
 Firstly, these maps and data are for you to use at your own risk. I take no responsibility for the accuracy of the maps or the data contained within.
 
@@ -13,7 +13,7 @@ The maps contain the following features:-
 -taps (from OSM, not a brilliant data set at the moment)
 -supermarkets
 -"eating places"
--a lot of the NCN network
+-a lot of the NCN (national cycle network)
 
 The POIs are all searchable so on the GPS you can look for the nearest bothy. I've not tested this in the field yet.
 
@@ -34,6 +34,9 @@ A sample can be seen at the url here http://phased.co.uk/wp-content/uploads/bike
 
 At the moment they are very much beta copies, please raise any issues you find here and I will do my best to create a set of new releases that improve them over time.
 
+I am already working on improvements as follows:-
 
-
-The maps are in no way perfect. 
+-use of the new Openmap opendata set from Ordnance Survey
+-improved icons for bothies, shops, eateries 
+-better scale based rendering, particulary at zoomed out views which can show too much/too little data
+-improved NCN rendering

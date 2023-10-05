@@ -4,6 +4,12 @@
 
 Downloaded from [mkgmap.org.uk](http://www.mkgmap.org.uk/download/mkgmap.html) and copied to bin/mkgmap/mkgmap.jar
 
+## spliter
+
+## osmium-tool
+
+brew install osmium-tool
+
 ## java
 
 Installed with

@@ -1,0 +1,71 @@
+1. compile the detail map to produce a .img file
+	> cgpsmapper ac "detail map.mp"
+	(note use of the 'ac' switch)
+
+2. pick a new FID value
+
+3. create a preview definition
+	use the new FID
+	the LblCoding must be the same as the detail map
+	use Levels=2 and ProductCode=1
+	set Level0 one lower than the final level in the detailed map
+	set Level1 one lower than Level0
+	set Zoom0 same as highest Zoom in detailed map
+	set Zoom1 one higher than Zoom0
+
+4. compile the preview definition to produce a .mp file (and other files)
+	> cpreview "preview definition.txt"
+
+5. compile the preview map to produce a .img file
+	> cgpsmapper <filename>.mp
+	(note omission of the 'ac' switch)
+	(you can ignore the warning about the ID being too small)
+
+6. create the types definition
+	use the new FID
+
+7. compile the types definition to produce a .typ file
+	> cgpsmapper typ "custom types.txt"
+	(produces pffff.TYP where p = product ID and f = FID in hex)
+
+8. edit the .reg file
+	the .reg file creates two registry keys with associated values
+
+	(1) on a 64bit machine the location of both keys have to be corrected:
+	original
+		HKEY_LOCAL_MACHINE\SOFTWARE\Garmin\MapSource\Families\[...]
+	corrected
+		HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Garmin\MapSource\Families\[...]
+
+	(2) correct the file paths
+		note that backslashes in the path names must be escaped
+		note that the "LOC" value should not point to an 'img' sub-directory
+
+	(3) add a TYP value to the FIRST key only
+
+	note that the FID is encoded into the "ID" value in Hex
+
+The result should look something like this:
+
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Garmin\MapSource\Families\OSV_road_check]
+"ID"=hex:7a,03
+"IDX"="C:\\Users\\Martin\\Documents\\GPS maps\\OS Vector road check\\OSV_road_check.mdx"
+"MDR"="C:\\Users\\Martin\\Documents\\GPS maps\\OS Vector road check\\OSV_road_check_mdr.img"
+"TYP"="C:\\Users\\Martin\\Documents\\GPS maps\\OS Vector road check\\1037A.typ"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Garmin\MapSource\Families\OSV_road_check\1]
+"LOC"="C:\\Users\\Martin\\Documents\\GPS maps\\OS Vector road check\\"
+"BMAP"="C:\\Users\\Martin\\Documents\\GPS maps\\OS Vector road check\\OSV_road_check.img"
+"TDB"="C:\\Users\\Martin\\Documents\\GPS maps\\OS Vector road check\\OSV_road_check.tdb"
+
+
+9. execute the .reg file to create the registry keys
+
+10. If you are updating a previously installed mapset then to get basecamp to show the new version you will most likely need to delete the tilecache:
+
+	(1) exit basecamp
+	(2) > del C:\Users\martin\AppData\Local\Garmin\Basecamp\TileCache\*.*
+	(3) restart basecamp
+		

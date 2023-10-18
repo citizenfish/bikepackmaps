@@ -1,0 +1,1 @@
+E:\Users\Martin\Documents\Java-ogr-to-osm>java -cp shp-to-osm-0.8.7-jar-with-dependencies.jar com.yellowbkpk.geo.shp.Main --shapefile "shapefiles\SP_Glasshouse_WGS84.shp" --osmfile "SP_Glasshouse_WGS84" --outdir "osm" --outputFormat osm --rulesfile rules.txt

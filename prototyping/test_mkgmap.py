@@ -1,8 +1,12 @@
 import os
 import sys
 sys.path.append(os.path.abspath('lib'))
-from tools import mkgmap
+from tools import mkgmap, OSZoomStack
 
-m = mkgmap(parameters={'style-file': 'style/typ/typfile', 'input-file': 'data/typ/typfile', 'output-dir': 'data/typ/typfile'})
+# Download OS zoomstack and convert it into OSM format
+# destination sets the working file
+# bbox sets the bounding box for the data (27700 CRS)
 
-print(m.run())
+o = OSZoomStack(destination='./prototyping/data/zoomstack', bbox=[271621, 50902, 304818, 68793])
+file = o.get_zoomstack()
+ogr = o.make_osm()

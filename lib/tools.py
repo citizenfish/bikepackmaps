@@ -19,6 +19,7 @@ class mkgmap:
         self.jarfile = kwargs.get('jarfile', 'bin/mkgmap/mkgmap.jar')
         self.command = kwargs.get('command', )
 
+
     def check(self):
         if not self.params:
             logging.error("No parameters specified")
@@ -52,6 +53,8 @@ class OSZoomStack:
     def __init__(self, *args, **kwargs):
         self.bbox = kwargs.get('bbox', [271621, 50902, 304818, 68793])
         self.dest = kwargs.get('destination', './data/zoomstack')
+        self.tag_translator = kwargs.get('tag_translator', 'zoomstack_translator.py')
+
     def get_zoomstack(self, *args, **kwargs):
         self.product_list = OpenDataDownload.all_products()
         for product in self.product_list:
@@ -101,7 +104,7 @@ class OSZoomStack:
         ogr_params.extend([str(i) for i in self.bbox])
 
         executor(ogr_params)
-        osm_params = ['ogr2osm', self.osm_in, '-o', self.osm_out]
+        osm_params = ['ogr2osm', self.osm_in, '-f', '-o', self.osm_out, '-t', self.tag_translator]
 
         executor(osm_params)
 

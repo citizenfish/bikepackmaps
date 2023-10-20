@@ -89,7 +89,7 @@ class OSZoomStack:
                 response = input('OS Zoomstack has already been unzipped. Do you want to unzip again? (y/n)')
 
             if response == 'y':
-                logging.info(f'Unzipping {self.product_filename} to {dest}')
+                logging.info(f'Unzipping {self.product_filename} to {self.dest}')
                 with zipfile.ZipFile(f'{self.dest}/{self.product_filename}', 'r') as zip_ref:
                     zip_ref.extractall(self.dest)
                     logging.info(f'Extracted {self.product_filename} to {self.dest}')

@@ -1,3 +1,5 @@
 ogr2osm
 osdatahub
 ogr
+osmnx
+pyproj

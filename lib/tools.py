@@ -2,7 +2,9 @@ import subprocess
 import logging
 import os
 import zipfile
+from pyproj import Transformer
 from osdatahub import OpenDataDownload
+import osmnx as ox
 
 def executor(params):
     result = subprocess.run(params)
@@ -132,3 +134,26 @@ class OSZoomStack:
         executor(osm_params)
 
         return self.osm_out
+
+class OSMDownloader:
+
+    def __init__(self, *args, **kwargs):
+        self.bbox_27700 = kwargs.get('bbox')
+        xmin, ymin, xmax, ymax = self.bbox_27700
+        transformer = Transformer.from_crs("EPSG:27700", "EPSG:4326")
+        ul = transformer.transform(xmin, ymax)
+        lr = transformer.transform(xmax, ymin)
+        self.bbox = ul + lr
+        self.output_dir = kwargs.get('output_dir')
+
+    def download(self, *args, **kwargs):
+        f = ox.features.features_from_bbox(self.bbox[0], self.bbox[2], self.bbox[1], self.bbox[3], kwargs.get('tags'))
+        layer = kwargs.get("file")
+        outfile = f'{self.output_dir}/{layer}.geopackage'
+        #f
+
+        #list_columns = [col for col in f.columns if f[col].apply(lambda x: isinstance(x, list)).any()]
+
+        f = f.drop(columns=['nodes'])
+        f.to_file(outfile, layer=layer, driver='GPKG')
+        return outfile

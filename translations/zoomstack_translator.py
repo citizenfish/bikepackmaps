@@ -149,10 +149,8 @@ class ZoomStackTranslation(ogr2osm.TranslationBase):
         # Road tagging
         if attrs['__LAYER'] in ['roads_local', 'roads_regional', 'roads_national']:
             if 'type' in attrs:
-                if attrs['type'] == 'Local':
+                if attrs['type'] in ('Local', 'Minor'):
                     tags['highway'] = 'residential'
-                elif attrs['type'] == 'Minor':
-                    tags['highway'] = 'tertiary'
                 elif attrs['type'] == 'Guided Busway':
                     tags['highway'] = 'bus_guideway'
                 elif attrs['type'] in ['Primary', 'A Road']:

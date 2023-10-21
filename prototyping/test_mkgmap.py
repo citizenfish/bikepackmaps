@@ -13,7 +13,7 @@ styles_dir = './style/mkgmap_styles'
 # destination sets the working file
 # bbox sets the bounding box for the data (27700 CRS)
 
-o = OSZoomStack(destination=zoomstack_destination, bbox=)
+o = OSZoomStack(destination=zoomstack_destination, bbox=extract_bbox)
 file = o.get_zoomstack()
 osm_output = o.make_osm()
 

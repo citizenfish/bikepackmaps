@@ -27,10 +27,4 @@ natural=scrub [0x4f resolution 20]
 # woods
 natural=wood [0x50 level 2]
 
-# the 'land' type
-natural=heath [0x010100 level 4]
-#natural=heath [0x40 resolution 20-20 continue]
-#natural=heath [0x41 resolution 21-21 continue]
-#natural=heath [0x42 resolution 22-22 continue]
-#natural=heath [0x43 resolution 23-23 continue]
-#natural=heath [0x44 resolution 24-24]
+

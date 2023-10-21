@@ -12,12 +12,12 @@ def executor(params):
     logging.info(f'Ran {params[0]} with {result.stdout}')
     return True
 
-class mkgmap:
-    def __init__(self, *args, **kwargs):
+class java_runner:
 
-        self.params = kwargs.get('parameters', None)
-        self.jarfile = kwargs.get('jarfile', 'bin/mkgmap/mkgmap.jar')
-        self.command = kwargs.get('command', )
+    def __init__(self, *args, **kwargs):
+        self.params = {
+            key.replace('_','-'):value for key, value in kwargs.items()
+        }
 
 
     def check(self):
@@ -25,28 +25,51 @@ class mkgmap:
             logging.error("No parameters specified")
             return False
 
-        if not self.params.get('style-file'):
-            logging.error("No style file specified")
-            return False
-
-        if not self.params.get('input-file'):
-            logging.error("No input file specified")
-            return False
-
-        if not self.params.get('output-file'):
-            logging.error("No output file specified")
-            return False
-
+        return True
     def run(self):
+        if not self.check():
+            logging.error('Run checks failed')
+            return False
+
         command = ['java', '-jar', self.jarfile]
 
         for key, value in self.params.items():
-            command.append(f'--{key}={value}')
-        command.append('--gmapsupp')
+            if value and key != 'input-file':
+                command.append(f'--{key}={value}')
+                #command.append(value)
+            else:
+                if key != 'input-file':
+                    command.append(f'--{key}')
 
-        logging.info(f'Running {command}')
+        if 'input-file' in self.params:
+            command.append(self.params['input-file'])
+
+        print(f'Running {command}')
         result = executor(command)
         return result
+
+class Splitter(java_runner):
+    def __init__(self, *args, **kwargs):
+        super().__init__(self,*args,**kwargs)
+        self.jarfile = kwargs.get('jarfile', 'bin/splitter/splitter.jar')
+
+class Mkgmap(java_runner):
+    def __init__(self, *args, **kwargs):
+        super().__init__(self, *args, **kwargs)
+        self.jarfile = kwargs.get('jarfile', 'bin/mkgmap/mkgmap.jar')
+
+    def check(self):
+        super().check()
+
+        if not self.params.get('read-config'):
+            logging.error(f"No read-config specified {self.params}")
+            return False
+
+        if not self.params.get('output-dir'):
+            logging.error(f"No output file specified {self.params}")
+            return False
+
+        return True
 
 class OSZoomStack:
 

@@ -1,12 +1,30 @@
 import os
 import sys
 sys.path.append(os.path.abspath('lib'))
-from tools import mkgmap, OSZoomStack
+from tools import OSZoomStack, Splitter, Mkgmap
+
+zoomstack_destination='./prototyping/data/zoomstack'
+extract_bbox=[271621, 50902, 304818, 68793]
+osm_output = './prototyping/data/zoomstack/extract.osm'
+output_dir = './prototyping/output'
+styles_dir = './style/mkgmap_styles'
 
 # Download OS zoomstack and convert it into OSM format
 # destination sets the working file
 # bbox sets the bounding box for the data (27700 CRS)
 
-o = OSZoomStack(destination='./prototyping/data/zoomstack', bbox=[271621, 50902, 304818, 68793])
+o = OSZoomStack(destination=zoomstack_destination, bbox=)
 file = o.get_zoomstack()
-ogr = o.make_osm()
+osm_output = o.make_osm()
+
+# Split the file up into tiles for processing and then create the map
+splitter = Splitter(output_dir=output_dir,
+                    input_file=osm_output)
+splitter.run()
+
+make_map = Mkgmap(style_file=styles_dir,
+             style='Zoomstack',
+             read_config=f'{output_dir}/template.args',
+             gmapsupp=None,
+             output_dir=f'{output_dir}/Garmin')
+make_map.run()

@@ -185,13 +185,22 @@ amenity=university [0x2c05 resolution 24]
 # amenity=zoo is superceded by tourism=zoo
 amenity=zoo [0x2c07 resolution 24]
 
+# Zoomstack Site label
+amenity=site {name '${name}'} [0x3007 resolution 24]
+
 landuse=military [0x640b resolution 24]
 landuse=village_green & name=* [0x2c06 resolution 24]
 
 healthcare=hospital | amenity=hospital | amenity=clinic [0x3002 resolution 22]
 healthcare=* | amenity=dentist | amenity=doctors [0x3002 resolution 24]
 
-highway=motorway_junction & exit:road_ref=* {add exit:to='${exit_to}' | '${destination}'} [0x2000 resolution 24]
+#highway=motorway_junction & exit:road_ref=* {add exit:to='${exit_to}' | '${destination}'} [0x2000 resolution 24]
+
+# Zoomstack has less information than OSM
+highway=motorway_junction {set mkgmap:label:1 = 'J${name}' | 'Jn'}
+# for the overview map only, show a blue bot at the location of the junction
+highway=motorway_junction [0x1401 level 4-4 continue]
+highway=motorway_junction [0x1400 level 3]
 
 highway=services {add exit:facility="0x02,I,0x47,Features"} [0x230f resolution 20 default_name 'Services']
 
@@ -225,6 +234,11 @@ natural=peak {name '${name|def:}${ele|height:m=>ft|def:}'} [0x6616 resolution 24
 natural=rock [0x6614 resolution 24]
 natural=volcano [0x2c0c resolution 24]
 natural=bay & name=* [0x6503 resolution 20]
+
+# Added to cope with Zoomstack Landform type may want to change these
+natural=landform {name '${name}'} [0x2c06 resolution 24]
+natural=landcover {name '${name}'} [0x2c06 resolution 24]
+
 
 railway=station [0x2f08 resolution 22]
 railway=halt [0x2f08 resolution 23]

@@ -9,6 +9,8 @@ class ZoomStackTranslation(ogr2osm.TranslationBase):
 
         layername = layer.GetName()
 
+        print(f'Processing layer {layername}')
+
         # Add a __LAYER field
         field = ogr.FieldDefn('__LAYER', ogr.OFTString)
         field.SetWidth(len(layername))
@@ -41,13 +43,13 @@ class ZoomStackTranslation(ogr2osm.TranslationBase):
 
         # Airports
         if attrs['__LAYER'] == 'airports':
-            tags['aeroway'] = 'aerodrome'
+            tags['aeroway'] = 'airport'
             tags['type'] = 'airport'
 
-        # Boundaries
+        # Boundaries - Zoomstack they are national
         if attrs['__LAYER'] == 'boundaries':
-            tags['boundary'] = 'administrative'
-            tags['admin_level'] = '6'
+            tags['boundary'] = 'national'
+
 
         # Contours
         if attrs['__LAYER'] == 'contours':
@@ -59,8 +61,11 @@ class ZoomStackTranslation(ogr2osm.TranslationBase):
             else:
                 tags['contour_ext'] = 'elevation_medium'
 
-        # district_buildings
-        if attrs['__LAYER'] in ['district_buildings','local_buildings']:
+        # district_buildings, these are amalgamations for zoomed out views
+        if attrs['__LAYER'] == 'district_buildings':
+            tags['district_building'] = 'yes'
+
+        if attrs['__LAYER'] == 'local_buildings':
             tags['building'] = 'yes'
 
         # Power Lines
@@ -77,11 +82,69 @@ class ZoomStackTranslation(ogr2osm.TranslationBase):
 
         # Land
         if attrs['__LAYER'] == 'land':
-            tags['natural'] = 'heath'
+            tags['natural'] = 'land'
 
         # Names
         if attrs['__LAYER'] == 'names':
-            tags['name'] = 'name1'
+            tags['name'] = attrs['name1']
+
+            if attrs['type'] == 'Country':
+                tags['place'] = 'country'
+
+            if attrs['type'] in ['Capital','City']:
+                tags['place'] = 'city'
+
+            if attrs['type'] == 'Town':
+                tags['place'] = 'town'
+
+            if attrs['type'] == 'Village':
+                tags['place'] = 'village'
+
+            if attrs['type'] in ['Hamlet', 'Small Settlement']:
+                tags['place'] = 'hamlet'
+
+            if attrs['type'] == 'Suburban Area':
+                tags['place'] = 'suburb'
+
+            if attrs['type'] == 'Woodland':
+                tags['landuse'] = 'wood'
+
+            if attrs['type'] == 'Landform':
+                tags['natural'] = 'landform'
+
+            if attrs['type'] == 'Landcover':
+                tags['natural'] = 'landcover'
+
+            if attrs['type'] == 'Water':
+                tags['natural'] = 'water'
+
+            if attrs['type'] == 'Greenspace':
+                tags['landuse'] = 'recreation_ground'
+
+            if attrs['type'] == 'Sites':
+                tags['amenity'] = 'site'
+
+            if attrs['type'] == 'Motorway Junctions':
+                tags['highway'] = 'motorway_junction'
+
+        # National park ignored for  now
+
+        # Railway Stations
+        if attrs['__LAYER'] in 'railway_stations':
+            tags['railway'] = 'station'
+            # TODO check name rendering
+
+        # Rail
+        if attrs['__LAYER'] == 'rail':
+            if attrs['type'] in ['Single Track', 'Multi Track']:
+                tags['railway'] = 'rail'
+
+            if attrs['type'] == 'Narrow Gauge':
+                tags['railway'] = 'narrow gauge'
+
+            if attrs['type'] == 'Tunnel':
+                tags['railway'] = 'rail'
+                tags['tunnel'] = 'yes'
 
         # Road tagging
         if attrs['__LAYER'] in ['roads_local', 'roads_regional', 'roads_national']:
@@ -101,5 +164,44 @@ class ZoomStackTranslation(ogr2osm.TranslationBase):
                 elif attrs['type'] == 'Tunnels':
                     tags['highway'] = 'road'
                     tags['tunnel'] = 'yes'
+
+        if attrs['__LAYER'] == 'sites':
+            if attrs['type'] == 'Air Transport':
+                tags['areoway'] = 'airport'
+
+            if attrs['type'] == 'Education':
+                tags['amenity'] = 'school'
+
+            if attrs['type'] == 'Medical Care':
+                tags['healthcare'] = 'yes'
+
+            if attrs['type'] == 'Road Transport':
+                tags['highway'] = 'services'
+
+            # TODO something better here
+            if attrs['type'] == 'Water Transport':
+                tags['landuse'] = 'industrial'
+
+        # Surface Water (polygons)
+        if attrs['__LAYER'] == 'surface_water':
+            tags['natural'] = 'water'
+            tags['area'] = 'yes'
+
+        # Urban Areas #TODO check this
+        if attrs['__LAYER'] == 'urban_areas':
+            tags['place'] = 'suburb'
+
+        # Water lines #TODO may need to add Regional/National
+        if attrs['__LAYER'] == 'waterlines':
+            if attrs['type'] == 'Local':
+                tags['waterway'] = 'stream'
+            if attrs['type'] in ['District']:
+                tags['waterway'] = 'river'
+            # TODO MHM MLW tide lines
+
+        if attrs['__LAYER'] == 'woodland':
+            if attrs['type'] == 'Local':
+                tags['landuse'] = 'forest'
+            # TODO REGIONAL and NATIONAL
 
         return tags

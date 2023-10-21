@@ -89,6 +89,10 @@ natural=water [0x3c resolution 18]
 natural=waterfall | waterway=waterfall [0x47 resolution 21]
 natural=sea {add mkgmap:skipSizeFilter=true; set mkgmap:drawLevel=2} [0x32 resolution 10]
 
+# the 'land' type from Zoomstack
+natural=land [0x010100 level 4]
+
+
 waterway=riverbank [0x46 resolution 20]
 
 # mop up any remaining water areas
@@ -125,6 +129,8 @@ natural=wood [0x50 resolution 20]
 
 # building tag should be last
 amenity=* & area!=no & amenity!=grave_yard {add name='${amenity|subst:"_=> "}'} [0x23 resolution 24]
+
+district_building=* & district_building!=no [0x13 resolution 22-23]
 building=* & building!=no [0x13 resolution 24]
 tourism=* & area!=no & waterway!=* {add name='${tourism|subst:"_=> "}'} [0x21 resolution 24]
 

@@ -21,6 +21,7 @@ class java_runner:
             key.replace('_','-'):value for key, value in kwargs.items()
         }
         self.params_suffix = None
+        self.logging_config = None
 
     def check(self):
         if not self.params:
@@ -33,7 +34,10 @@ class java_runner:
             logging.error('Run checks failed')
             return False
 
-        command = ['java', '-jar', self.jarfile]
+        if self.logging_config:
+            command = ['java', f'-Dlog.config={self.logging_config}','-jar', self.jarfile]
+        else:
+            command = ['java', '-jar', self.jarfile]
 
         for key, value in self.params.items():
             if value and key != 'input-file':
@@ -67,6 +71,10 @@ class Mkgmap(java_runner):
         if self.params.get('typ-file'):
             self.params_suffix = [self.params.get('typ-file')]
             del self.params['typ-file']
+
+        if self.params.get('logging-config'):
+            self.logging_config = self.params.get('logging-config')
+            del self.params['logging-config']
 
     def check(self):
         super().check()

@@ -46,3 +46,4 @@ I'm going to park this and focus on rendering land and sea
 
 At the moment we get a decent result with the Zoomstack style and mapnik.txt as the typ file
 
+I am trying out a style from https://github.com/ligfietser/mkgmap-style-sheets/tree/master

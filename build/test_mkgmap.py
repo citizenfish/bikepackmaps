@@ -8,7 +8,9 @@ extract_bbox=[271621, 50902, 304818, 68793]
 osm_output = './build/data/devon-latest.osm.pbf'
 output_dir = './build/output'
 styles_dir = './style/mkgmap_styles'
-typ_file = './style/typ_files/mkgmap-typ-files/mapnik.txt'
+typ_file = './style/typ_files/mkgmap-typ-files/cycle.txt'
+precomp_sea = './build/data/sea/sea-latest.zip'
+bounds = './build/data/bounds/bounds-latest.zip'
 
 # Download OS zoomstack and convert it into OSM format
 # destination sets the working file
@@ -25,11 +27,21 @@ typ_file = './style/typ_files/mkgmap-typ-files/mapnik.txt'
 
 make_map = Mkgmap(
              style_file=styles_dir,
-             style='Zoomstack',
-             read_config=f'{output_dir}/template.args',
+             style='cycle',
              gmapsupp=None,
              output_dir=f'{output_dir}/Garmin',
              typ_file=typ_file,
-             keep_going=None)
+             keep_going=None,
+             split_name_index=None,
+             merge_lines=None,
+             index=None,
+             nsis=None,
+             draw_priority='31',
+             location_autofill='is_in,nearest',
+             generate_sea=None,
+             precomp_sea=precomp_sea,
+             bounds=bounds,
+             # Note well that this has to be the last argument otherwise all those before it are ignored
+             read_config=f'{output_dir}/template.args',)
 
 make_map.run()

@@ -84,6 +84,13 @@ Type=0x004,9
 
 ;===================== POLYGONS ========================
 
+[_polygon]
+Type=0x10100
+String1=0x04,Land
+ExtendedLabels=N
+Xpm="0 0 1 0"
+"1 c #FFFFFF"
+[end]
 
 [_polygon]
 type=0x02
@@ -909,7 +916,7 @@ String9=0x05,Sfondo
 ExtendedLabels=Y
 FontStyle=LargeFont
 CustomColor=Day
-DaycustomColor:#00FFFF
+DaycustomColor:#4D80B3
 Xpm="0 0 1 0"
 "1 c #F2EFE9"
 [end]

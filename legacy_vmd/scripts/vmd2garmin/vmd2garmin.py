@@ -866,7 +866,7 @@ for action_raw in config.get('vmd2garmin', 'actions').split(','):
         print(
             '\nIf the map installed correctly it should now appear within Basecamp (you may need to hit ctrl-G twice to refresh the tile cache)')
         print(
-            'to install to a GPS device upload gmapsupp.img from the output directory to the \\garmin folder on the device\'s memory card')
+            'to install to a GPS device upload gmapsupp_VMD.img from the output directory to the \\garmin folder on the device\'s memory card')
 
 
     else:

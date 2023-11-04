@@ -1,0 +1,14 @@
+{
+  "downloads": [
+    {
+      "url" : "https://www.thkukuk.de/osm/data/bounds-latest.zip",
+      "download_location": "build/data/bounds",
+      "filename" : "bounds-latest.zip"
+    },
+    {
+      "url": "https://www.thkukuk.de/osm/data/sea-latest.zip",
+      "download_location": "build/data/sea",
+      "filename" : "sea-latest.zip"
+    }
+  ]
+}

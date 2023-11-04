@@ -20,7 +20,7 @@ class java_runner:
         self.params = {
             key.replace('_','-'):value for key, value in kwargs.items()
         }
-
+        self.params_suffix = None
 
     def check(self):
         if not self.params:
@@ -46,6 +46,10 @@ class java_runner:
         if 'input-file' in self.params:
             command.append(self.params['input-file'])
 
+        if self.params_suffix:
+            for s in self.params_suffix:
+                command.append(s)
+
         print(f'Running {command}')
         result = executor(command)
         return result
@@ -55,10 +59,14 @@ class Splitter(java_runner):
         super().__init__(self,*args,**kwargs)
         self.jarfile = kwargs.get('jarfile', 'bin/splitter/splitter.jar')
 
+
 class Mkgmap(java_runner):
     def __init__(self, *args, **kwargs):
         super().__init__(self, *args, **kwargs)
         self.jarfile = kwargs.get('jarfile', 'bin/mkgmap/mkgmap.jar')
+        if self.params.get('typ-file'):
+            self.params_suffix = [self.params.get('typ-file')]
+            del self.params['typ-file']
 
     def check(self):
         super().check()
@@ -135,7 +143,7 @@ class OSZoomStack:
 
         return self.osm_out
 
-class OSMDownloader:
+class OSMNXDownloader:
 
     def __init__(self, *args, **kwargs):
         self.bbox_27700 = kwargs.get('bbox')

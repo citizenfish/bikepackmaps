@@ -46,16 +46,16 @@ def filterTags(attrs):
         # AdministrativeBoundary.shp (LINE)
         #
         if attrs['FEATCODE'].strip() == '25204':    # National
-            tags['boundary'] = 'administrative'
+            tags['bounds'] = 'administrative'
             tags['admin_level'] = '4'
         elif attrs['FEATCODE'].strip() == '25200':  # Parish or Community
-            tags['boundary'] = 'administrative'
+            tags['bounds'] = 'administrative'
             tags['admin_level'] = '10'
         elif attrs['FEATCODE'].strip() == '25201':  # District or London Borough
-            tags['boundary'] = 'administrative'
+            tags['bounds'] = 'administrative'
             tags['admin_level'] = '8'
         elif attrs['FEATCODE'].strip() == '25202':  # County, Region or Island
-            tags['boundary'] = 'administrative'
+            tags['bounds'] = 'administrative'
             tags['admin_level'] = '6'
 
         # Airport.shp (POINT)

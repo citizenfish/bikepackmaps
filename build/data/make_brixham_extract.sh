@@ -1,4 +1,4 @@
-# Download zoomstack unzip and copy to prototyping/data
+# Download zoomstack unzip and copy to build/data
 
 ogr2ogr -f gpkg -spat 271621 50902 304818 68793 ./prototyping/data/brixham.gpkg  ./prototyping/data/OS_Open_Zoomstack.gpkg
 

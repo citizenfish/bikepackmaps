@@ -48,7 +48,7 @@ class ZoomStackTranslation(ogr2osm.TranslationBase):
 
         # Boundaries - Zoomstack they are national
         if attrs['__LAYER'] == 'boundaries':
-            tags['boundary'] = 'national'
+            tags['bounds'] = 'national'
 
 
         # Contours

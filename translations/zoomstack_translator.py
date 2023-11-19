@@ -1,5 +1,6 @@
 import ogr2osm
 from osgeo import ogr
+from layers import layers_to_process
 
 class ZoomStackTranslation(ogr2osm.TranslationBase):
 
@@ -9,7 +10,10 @@ class ZoomStackTranslation(ogr2osm.TranslationBase):
 
         layername = layer.GetName()
 
-        print(f'Processing layer {layername}')
+        if layername in layers_to_process:
+            print(f'Processing layer {layername}')
+        else:
+            return None
 
         # Add a __LAYER field
         field = ogr.FieldDefn('__LAYER', ogr.OFTString)

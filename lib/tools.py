@@ -5,6 +5,7 @@ import zipfile
 from pyproj import Transformer
 from osdatahub import OpenDataDownload
 import osmnx as ox
+import osmium
 
 def executor(params):
     result = subprocess.run(params)
@@ -58,6 +59,18 @@ class java_runner:
         result = executor(command)
         return result
 
+class GetMaxOSMID(osmium.SimpleHandler):
+
+    def __init__(self):
+        super(GetMaxOSMID,self).__init__()
+        self.max_id = 0
+
+    def node(self, n):
+        self.max_id = max(self.max_id, n.id)
+
+    def reset(self):
+        self.max_id = 0
+
 class Splitter(java_runner):
     def __init__(self, *args, **kwargs):
         super().__init__(self,*args,**kwargs)
@@ -95,6 +108,7 @@ class OSZoomStack:
         self.bbox = kwargs.get('bbox', [271621, 50902, 304818, 68793])
         self.dest = kwargs.get('destination', './data/zoomstack')
         self.tag_translator = kwargs.get('tag_translator', 'zoomstack_translator.py')
+        self.max_id = kwargs.get('max_id', 0)
 
     def get_zoomstack(self, *args, **kwargs):
         self.product_list = OpenDataDownload.all_products()
@@ -137,19 +151,56 @@ class OSZoomStack:
 
             return self.dest_file
 
-    def make_osm(self):
+    def make_osm(self, **kwargs):
         logging.info(f'Making OSM using bbox {self.bbox}')
         self.osm_in = f'{self.dest}/extract.gpkg'
         self.osm_out = f'{self.dest}/extract.osm'
-        ogr_params = ['ogr2ogr', '-f', 'gpkg', '-overwrite', self.osm_in, self.dest_file, '-spat']
-        ogr_params.extend([str(i) for i in self.bbox])
 
-        executor(ogr_params)
-        osm_params = ['ogr2osm', self.osm_in, '-f', '-o', self.osm_out, '-t', self.tag_translator]
+        response = 'y'
+        if os.path.isfile(self.dest_file):
+            response = input('OS Zoomstack has already been clipped. Do you want to clip and write again? (y/n)')
 
-        executor(osm_params)
+        if response == 'y':
+            print(f'Clipping  to {self.dest_file}')
+            ogr_params = ['ogr2ogr', '-f', 'gpkg', '-overwrite', self.osm_in, self.dest_file, '-spat']
+            ogr_params.extend([str(i) for i in self.bbox])
+            executor(ogr_params)
 
-        return self.osm_out
+
+        out_file = f'{self.osm_out}.pbf'
+        response = 'y'
+
+        if os.path.isfile(out_file):
+            response = input('OS Zoomstack has already been converted, convert again? (y/n)')
+
+        if response == 'y':
+            print(f'Writing Zoomstack filtered data to {out_file}')
+            osm_params = ['ogr2osm', self.osm_in, '-f', '--pbf', '-o', out_file, '-t', self.tag_translator, '--id', str(self.max_id)]
+            executor(osm_params)
+
+        return out_file
+
+class OSMMerge:
+    def __init__(self, **kwargs):
+        self.files = kwargs.get('files')
+        self.output_file = kwargs.get('output_file')
+    def merge_all(self):
+        osmium_params = ['osmium','cat']
+        for f in self.files:
+            osmium_params.append(f)
+        osmium_params = osmium_params + ['-o', self.output_file, '--overwrite']
+        executor(osmium_params)
+        return self.output_file
+
+class OSMSort:
+    def __init__(self, **kwargs):
+        self.input_file = kwargs.get('input_file')
+        self.output_file = kwargs.get('output_file')
+
+    def sort_all(self):
+        osmium_params = ['osmium','sort', '-o', self.output_file, self.input_file, '--overwrite']
+        executor(osmium_params)
+        return self.output_file
 
 class OSMNXDownloader:
 

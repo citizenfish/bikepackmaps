@@ -3,3 +3,5 @@ osdatahub
 ogr
 osmnx
 pyproj
+osmium
+protobuf

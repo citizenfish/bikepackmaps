@@ -51,3 +51,15 @@ I am trying out a style from https://github.com/ligfietser/mkgmap-style-sheets/t
 Took a while to work out that the command line option --read-config needs to be right at the end
 if not all other command line options are overridden
 
+# 19th November 2023
+
+I have created a new view in QMapShack which displays the old bikepackmap that I can use as a styling reference
+
+Am now working on:-
+
+- bikepack.txt TYP file
+- bikepack style
+
+## Contours
+
+Contour lines are not in the OSM data so we need to create and merge these

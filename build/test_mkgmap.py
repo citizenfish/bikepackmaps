@@ -5,7 +5,7 @@ from tools import OSZoomStack, Splitter, Mkgmap, GetMaxOSMID, OSMMerge, OSMSort
 
 
 zoomstack_destination='./build/data/zoomstack'
-extract_bbox = [271621, 50902, 304818, 68793]
+extract_bbox = [134340, 20297, 407049, 164276]
 osm_output = './build/data/devon-latest.osm.pbf'
 output_dir = './build/output'
 splitter_dir = './build/splitter'
@@ -15,6 +15,8 @@ precomp_sea = './build/data/sea/sea-latest.zip'
 bounds = './build/data/bounds/bounds-latest.zip'
 merged_output = f'{output_dir}/merged.osm.pbf'
 
+# ogr2ogr -f 'GPKG' -s_srs EPSG:4326 -t_srs EPSG:27700 ./build/data/itts/all-itts-27700.gpkg ./build/data/itts/all-itts.gpkg
+# ogr2ogr -f 'GPKG' ./build/data/itts/all-itts-27700-devon.gpkg ./build/data/itts/all-itts-27700.gpkg -spat 134340 20297 407049 164276
 if len(sys.argv) == 1 or sys.argv[1] == 'all':
     # Get the Max ID of the osm data
 

@@ -6,7 +6,7 @@ from tools import OSZoomStack, Splitter, Mkgmap, GetMaxOSMID, OSMMerge, OSMSort
 
 zoomstack_destination='./build/data/zoomstack'
 extract_bbox = [134340, 20297, 407049, 164276]
-osm_output = './build/data/devon-latest.osm.pbf'
+osm_output = './build/data/great-britain-latest.osm.pbf'
 output_dir = './build/output'
 splitter_dir = './build/splitter'
 styles_dir = './style/mkgmap_styles'
@@ -19,7 +19,7 @@ merged_output = f'{output_dir}/merged.osm.pbf'
 # ogr2ogr -f 'GPKG' ./build/data/itts/all-itts-27700-devon.gpkg ./build/data/itts/all-itts-27700.gpkg -spat 134340 20297 407049 164276
 if len(sys.argv) == 1 or sys.argv[1] == 'all':
     # Get the Max ID of the osm data
-
+    print(f'Getting max ID {osm_output}')
     mx = GetMaxOSMID()
     mx.apply_file(osm_output)
     print(f'Highest ID = {mx.max_id}')
@@ -29,7 +29,7 @@ if len(sys.argv) == 1 or sys.argv[1] == 'all':
     # destination sets the working file
     # bbox sets the bounding box for the data (27700 CRS)
 
-    o = OSZoomStack(destination=zoomstack_destination, bbox=extract_bbox, max_id=mx.max_id)
+    o = OSZoomStack(destination=zoomstack_destination,  max_id=mx.max_id)
     file = o.get_zoomstack()
     zoomstack_output = o.make_osm()
 
@@ -45,6 +45,7 @@ if len(sys.argv) == 1 or sys.argv[1] == 'all':
     merger.merge_all()
 
 if len(sys.argv) > 1 and sys.argv[1] in ('splitter', 'all'):
+    print('Sorting')
 
     # sort by id
     osms = OSMSort(input_file=merged_output, output_file=f'{output_dir}/sorted.pbf')

@@ -2,7 +2,7 @@ import ogr2osm
 from osgeo import ogr
 from layers import layers_to_process
 
-class ZoomStackTranslation(ogr2osm.TranslationBase):
+class BikePackTranslation(ogr2osm.TranslationBase):
 
     def filter_layer(self, layer):
         if not layer:
@@ -34,7 +34,7 @@ class ZoomStackTranslation(ogr2osm.TranslationBase):
     def filter_tags(self, attrs):
 
         tags = {}
-        tags['source'] = 'oszoomstack'
+        tags['source'] = 'bikepack'
 
         if not attrs:
             return tags

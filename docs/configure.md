@@ -23,10 +23,10 @@ sudo apt-get install osmium-tool gdal-bin libgdal-dev
 export CPLUS_INCLUDE_PATH=/usr/include/gdal
 export C_INCLUDE_PATH=/usr/include/gdal
 ogrinfo --version
-pip install GDAL-<VERSION>
+pip install GDAL==<VERSION>
 pip install -r requirements.txt
 sudo apt-get install default-jre
 sudo apt-get install osmosis
-suod apt-get install osmctools
+sudo apt-get install osmctools
 ```
 

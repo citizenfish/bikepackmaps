@@ -30,3 +30,6 @@ sudo apt-get install osmosis
 sudo apt-get install osmctools
 ```
 
+# Download bounds and sea
+
+https://www.mkgmap.org.uk/download/mkgmap.html

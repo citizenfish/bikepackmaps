@@ -1,0 +1,1499 @@
+
+
+[_id]
+ProductCode=1
+FID=6112
+CodePage=1252
+ [End]
+
+;=========== COMMENTAIRES ======
+[_comments]
+[End]
+
+
+
+
+;=========== POLYGONES : PRIORITE DANS L'AFFICHAGE ======
+[_drawOrder]
+[End]
+
+
+
+
+
+;===================== POLYGONES ========================
+
+
+[_polygon]
+Type=0x0c
+String1=0x04,Map Ornamentation
+ExtendedLabels=N
+Xpm="0 0 1 0"
+"1 c #606060"
+[end]
+
+
+[_polygon]
+Type=0x0d
+String1=0x04,Glasshouse
+ExtendedLabels=N
+Xpm="32 32 2 1"
+"! c #A0896D"
+"# c #FFFFFF"
+"######!#######!!######!#######!!"
+"######!#####!!!#######!#####!!!#"
+"#####!####!!#!#######!####!!#!##"
+"#####!##!!###!#######!##!!###!##"
+"####!#!!####!#######!#!!####!###"
+"####!!######!#######!!######!###"
+"##!!#######!######!!#######!####"
+"!!#!#######!####!!#!#######!####"
+"##!#######!###!!##!#######!###!!"
+"##!#######!#!!####!#######!#!!##"
+"#!#######!!!#####!#######!!!####"
+"#!######!!#######!######!!######"
+"!#####!!!#######!#####!!!#######"
+"!###!!##!#######!###!!##!#######"
+"##!!###!#######!##!!###!#######!"
+"!!#####!#######!!!#####!#######!"
+"######!#######!!######!#######!!"
+"######!#####!!!#######!#####!!!#"
+"#####!####!!#!#######!####!!#!##"
+"#####!##!!###!#######!##!!###!##"
+"####!#!!####!#######!#!!####!###"
+"####!!######!#######!!######!###"
+"##!!#######!######!!#######!####"
+"!!#!#######!####!!#!#######!####"
+"##!#######!###!!##!#######!###!!"
+"##!#######!#!!####!#######!#!!##"
+"#!#######!!!#####!#######!!!####"
+"#!######!!#######!######!!######"
+"!#####!!!#######!#####!!!#######"
+"!###!!##!#######!###!!##!#######"
+"##!!###!#######!##!!###!#######!"
+"!!#####!#######!!!#####!#######!"
+;12345678901234567890123456789012
+[end]
+
+
+[_polygon]
+Type=0x13
+String1=0x04,Building
+ExtendedLabels=N
+Xpm="0 0 1 0"
+"1 c #E6D4BF"
+[end]
+
+
+[_polygon]
+Type=0x3c
+String1=0x04,Surfacewater Area
+ExtendedLabels=N
+Xpm="0 0 1 0"
+"1 c #D5F3FD"
+[end]
+
+
+[_polygon]
+Type=0x50
+String1=0x04,Woods
+ExtendedLabels=N
+Xpm="0 0 1 0"
+"1 c #CCD2B4"
+[end]
+
+
+[_polygon]
+Type=0x53
+String1=0x04,Foreshore
+ExtendedLabels=N
+Xpm="32 32 2 1"
+"! c #FFFFFF"
+"  c none"
+"  !!!     !!!     !!!     !!!   "
+" !!!     !!!     !!!     !!!    "
+"!!!     !!!     !!!     !!!     "
+"!!     !!!     !!!     !!!     !"
+"!     !!!     !!!     !!!     !!"
+"     !!!     !!!     !!!     !!!"
+"    !!!     !!!     !!!     !!! "
+"   !!!     !!!     !!!     !!!  "
+"  !!!     !!!     !!!     !!!   "
+" !!!     !!!     !!!     !!!    "
+"!!!     !!!     !!!     !!!     "
+"!!     !!!     !!!     !!!     !"
+"!     !!!     !!!     !!!     !!"
+"     !!!     !!!     !!!     !!!"
+"    !!!     !!!     !!!     !!! "
+"   !!!     !!!     !!!     !!!  "
+"  !!!     !!!     !!!     !!!   "
+" !!!     !!!     !!!     !!!    "
+"!!!     !!!     !!!     !!!     "
+"!!     !!!     !!!     !!!     !"
+"!     !!!     !!!     !!!     !!"
+"     !!!     !!!     !!!     !!!"
+"    !!!     !!!     !!!     !!! "
+"   !!!     !!!     !!!     !!!  "
+"  !!!     !!!     !!!     !!!   "
+" !!!     !!!     !!!     !!!    "
+"!!!     !!!     !!!     !!!     "
+"!!     !!!     !!!     !!!     !"
+"!     !!!     !!!     !!!     !!"
+"     !!!     !!!     !!!     !!!"
+"    !!!     !!!     !!!     !!! "
+"   !!!     !!!     !!!     !!!  "
+;12345678901234567890123456789012
+[end]
+
+
+[_polygon]
+Type=0x10100
+String1=0x04,Land
+ExtendedLabels=N
+Xpm="0 0 1 0"
+"1 c #FFFFFF"
+[end]
+
+
+[_polygon]
+Type=0x10301
+String1=0x04,Tidal Water
+ExtendedLabels=N
+Xpm="0 0 1 0"
+"1 c #AEC7CF"
+[end]
+
+
+;====================== LINES ===========================
+
+
+[_line]
+Type=0x01
+UseOrientation=N
+LineWidth=16
+BorderWidth=2
+Xpm="0 0 2 0"
+"1 c #02BAEE"
+"2 c #000000"
+String1=0x04,Motorway 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x02
+UseOrientation=N
+Xpm="32 12 2  1"
+"! c #000000"
+"# c #00AA54"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"################################"
+"################################"
+"################################"
+"################################"
+"!###!###!###!###!###!###!###!###"
+"##!###!###!###!###!###!###!###!#"
+"################################"
+"################################"
+"################################"
+"################################"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x04,Trunk road 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x03
+UseOrientation=N
+Xpm="32 12 2  1"
+"! c #000000"
+"# c #F72F99"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"################################"
+"################################"
+"################################"
+"################################"
+"!###!###!###!###!###!###!###!###"
+"##!###!###!###!###!###!###!###!#"
+"################################"
+"################################"
+"################################"
+"################################"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x04,A road 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x04
+UseOrientation=N
+Xpm="32 12 2  1"
+"! c #000000"
+"# c #FF9F3C"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"################################"
+"################################"
+"################################"
+"################################"
+"!###!###!###!###!###!###!###!###"
+"##!###!###!###!###!###!###!###!#"
+"################################"
+"################################"
+"################################"
+"################################"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x04,B road 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x05
+UseOrientation=N
+Xpm="32 12 2  1"
+"! c #000000"
+"# c #FFEF5A"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"################################"
+"################################"
+"################################"
+"################################"
+"!###!###!###!###!###!###!###!###"
+"##!###!###!###!###!###!###!###!#"
+"################################"
+"################################"
+"################################"
+"################################"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x04,minor road 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x06
+UseOrientation=N
+LineWidth=5
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFFF"
+"2 c #808080"
+String1=0x04,Residential 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x07
+UseOrientation=N
+LineWidth=4
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #D7D7D7"
+"2 c #808080"
+String1=0x04,Private road publically accessible 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x08
+UseOrientation=N
+Xpm="32 7 2  1"
+"! c #F72F99"
+"  c none"
+"!!!!    !!!!    !!!!    !!!!    "
+"!!!!    !!!!    !!!!    !!!!    "
+"!!!!    !!!!    !!!!    !!!!    "
+"!!!!    !!!!    !!!!    !!!!    "
+"!!!!    !!!!    !!!!    !!!!    "
+"!!!!    !!!!    !!!!    !!!!    "
+"!!!!    !!!!    !!!!    !!!!    "
+;12345678901234567890123456789012
+String1=0x04,Pedestrianised 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x0b
+UseOrientation=N
+LineWidth=4
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #02BAEE"
+"2 c #000000"
+String1=0x04,Motorway_link 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x0d
+UseOrientation=N
+LineWidth=5
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #00AA54"
+"2 c #000000"
+String1=0x04,Trunk_link 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x0e
+UseOrientation=N
+LineWidth=5
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #F72F99"
+"2 c #000000"
+String1=0x04,A_link 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x0f
+UseOrientation=N
+LineWidth=5
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FF9F3C"
+"2 c #000000"
+String1=0x04,B_link 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10
+UseOrientation=N
+LineWidth=5
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFEF5A"
+"2 c #000000"
+String1=0x04,minor_link 0
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x14
+UseOrientation=N
+LineWidth=3
+Xpm="0 0 1 0"
+"1 c #000000"
+String1=0x04,Railway multi-track
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x15
+UseOrientation=N
+LineWidth=2
+Xpm="0 0 1 0"
+"1 c #000000"
+String1=0x04,High Tide Line
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x16
+UseOrientation=N
+Xpm="32 3 2  1"
+"! c #F72F99"
+"  c none"
+" !!!!!   !!!!!   !!!!!   !!!!!  "
+"!!!!!!! !!!!!!! !!!!!!! !!!!!!! "
+" !!!!!   !!!!!   !!!!!   !!!!!  "
+;12345678901234567890123456789012
+String1=0x04,Footpath
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x18
+UseOrientation=N
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #14AFE5"
+String1=0x04,surface water line
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x1a
+UseOrientation=N
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #A0A0A0"
+String1=0x04,Low Tide Line
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x29
+UseOrientation=Y
+Xpm="32 7 2  1"
+"! c #D0D0D0"
+"  c none"
+"     !   !                      "
+"      ! !                       "
+"       !                        "
+"!!!!!!! !!!!!!!!!!!!!!! !!!!!!! "
+"                       !        "
+"                      ! !       "
+"                     !   !      "
+;12345678901234567890123456789012
+String1=0x04,Power Line
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10107
+UseOrientation=N
+Xpm="32 3 2  1"
+"! c #7F7F7F"
+"  c none"
+"!!!     !!!     !!!     !!!     "
+"                                "
+"!!!     !!!     !!!     !!!     "
+;12345678901234567890123456789012
+String1=0x04,Railway tunnel
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10108
+UseOrientation=N
+Xpm="32 2 2  1"
+"! c #0239EE"
+"# c #FFFFFF"
+"#!!!!!###!!!!!###!!!!!###!!!!!##"
+"#!!!!!###!!!!!###!!!!!###!!!!!##"
+;12345678901234567890123456789012
+String1=0x04,Cycleway
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10500
+UseOrientation=N
+Xpm="32 2 2  1"
+"! c #7F7F7F"
+"  c none"
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+;12345678901234567890123456789012
+String1=0x04,Private Access
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10600
+UseOrientation=N
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #A0896D"
+String1=0x04,Building Boundary
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10601
+UseOrientation=N
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #959983"
+String1=0x04,woods boundary
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e00
+UseOrientation=N
+LineWidth=8
+BorderWidth=2
+Xpm="0 0 2 0"
+"1 c #02BAEE"
+"2 c #000000"
+String1=0x04,Motorway 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e01
+UseOrientation=N
+LineWidth=4
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #02BAEE"
+"2 c #000000"
+String1=0x04,Motorway 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e02
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #02BAEE"
+"2 c #000000"
+String1=0x04,Motorway 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e03
+UseOrientation=N
+LineWidth=2
+Xpm="0 0 1 0"
+"1 c #02BAEE"
+String1=0x04,Motorway 4
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e04
+UseOrientation=N
+LineWidth=3
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #02BAEE"
+"2 c #000000"
+String1=0x04,Motorway_link 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e05
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #02BAEE"
+"2 c #000000"
+String1=0x04,Motorway_link 2Motorway_link 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e06
+UseOrientation=N
+LineWidth=1
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #02BAEE"
+"2 c #000000"
+String1=0x04,Motorway_link 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e07
+UseOrientation=N
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #02BAEE"
+String1=0x04,Motorway_link 4
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e08
+UseOrientation=N
+Xpm="32 7 2  1"
+"! c #000000"
+"# c #00AA54"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"################################"
+"################################"
+"!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#"
+"################################"
+"################################"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x04,Trunk Road 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e09
+UseOrientation=N
+LineWidth=4
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #00AA54"
+"2 c #000000"
+String1=0x04,Trunk Road 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e0a
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #00AA54"
+"2 c #000000"
+String1=0x04,Trunk Road 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e0b
+UseOrientation=N
+LineWidth=2
+Xpm="0 0 1 0"
+"1 c #00AA54"
+String1=0x04,Trunk Road 4
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e0c
+UseOrientation=N
+LineWidth=3
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #00AA54"
+"2 c #000000"
+String1=0x04,Trunk_link 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e0d
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #00AA54"
+"2 c #000000"
+String1=0x04,Trunk_link 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e0e
+UseOrientation=N
+LineWidth=1
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #00AA54"
+"2 c #004F26"
+String1=0x04,Trunk_link 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e0f
+UseOrientation=N
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #00AA54"
+String1=0x04,Trunk_link 4
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e10
+UseOrientation=N
+Xpm="32 7 2  1"
+"! c #000000"
+"# c #F72F99"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"################################"
+"################################"
+"!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#"
+"################################"
+"################################"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x04,A Road 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e11
+UseOrientation=N
+LineWidth=4
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #F72F99"
+"2 c #000000"
+String1=0x04,A Road 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e12
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #F72F99"
+"2 c #000000"
+String1=0x04,A Road 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e13
+UseOrientation=N
+LineWidth=2
+Xpm="0 0 1 0"
+"1 c #F72F99"
+String1=0x04,A Road 4
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e14
+UseOrientation=N
+LineWidth=3
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #F72F99"
+"2 c #000000"
+String1=0x04,A_link 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e15
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #F72F99"
+"2 c #000000"
+String1=0x04,A_link 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e16
+UseOrientation=N
+LineWidth=1
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #F72F99"
+"2 c #911B5A"
+String1=0x04,A_link 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e17
+UseOrientation=N
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #F72F99"
+String1=0x04,A_link 4
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e18
+UseOrientation=N
+Xpm="32 7 2  1"
+"! c #000000"
+"# c #FF9F3C"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"################################"
+"################################"
+"!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#"
+"################################"
+"################################"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x04,B Road 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e19
+UseOrientation=N
+LineWidth=4
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FF9F3C"
+"2 c #000000"
+String1=0x04,B Road 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e1a
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FF9F3C"
+"2 c #000000"
+String1=0x04,B Road 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e1b
+UseOrientation=N
+LineWidth=3
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FF9F3C"
+"2 c #000000"
+String1=0x04,B_link 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e1c
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FF9F3C"
+"2 c #000000"
+String1=0x04,B_link 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e1d
+UseOrientation=N
+LineWidth=1
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FF9F3C"
+"2 c #7D4E1D"
+String1=0x04,B_link 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e1e
+UseOrientation=N
+Xpm="32 7 2  1"
+"! c #000000"
+"# c #FFEF5A"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"################################"
+"################################"
+"!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#"
+"################################"
+"################################"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x04,minor Road 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10e1f
+UseOrientation=N
+LineWidth=4
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFEF5A"
+"2 c #000000"
+String1=0x04,minor Road 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f00
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFEF5A"
+"2 c #000000"
+String1=0x04,minor Road 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f01
+UseOrientation=N
+LineWidth=3
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFEF5A"
+"2 c #000000"
+String1=0x04,minor_link 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f02
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFEF5A"
+"2 c #000000"
+String1=0x04,minor_link 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f03
+UseOrientation=N
+LineWidth=1
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFEF5A"
+"2 c #80782D"
+String1=0x04,minor_link 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f04
+UseOrientation=N
+LineWidth=3
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFFF"
+"2 c #808080"
+String1=0x04,Residential 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f05
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFFF"
+"2 c #808080"
+String1=0x04,Residential 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f06
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #D7D7D7"
+"2 c #A0A0A0"
+String1=0x04,Private road publically accessible 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f07
+UseOrientation=N
+LineWidth=1
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #D7D7D7"
+"2 c #A0A0A0"
+String1=0x04,Private road publically accessible 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f08
+UseOrientation=Y
+Xpm="32 5 2  1"
+"! c #F72F99"
+"  c none"
+"!!!!    !!!!    !!!!    !!!!    "
+"!!!!    !!!!    !!!!    !!!!    "
+"!!!!    !!!!    !!!!    !!!!    "
+"!!!!    !!!!    !!!!    !!!!    "
+"!!!!    !!!!    !!!!    !!!!    "
+;12345678901234567890123456789012
+String1=0x04,Pedestrianised 1
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f09
+UseOrientation=Y
+Xpm="32 4 2  1"
+"! c #F72F99"
+"  c none"
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+;12345678901234567890123456789012
+String1=0x04,Pedestrianised 2
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f0a
+UseOrientation=Y
+Xpm="32 3 2  1"
+"! c #F72F99"
+"  c none"
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+;12345678901234567890123456789012
+String1=0x04,Pedestrianised 3
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f0b
+UseOrientation=N
+LineWidth=2
+Xpm="0 0 1 0"
+"1 c #000000"
+String1=0x04,Railway single track
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f0c
+UseOrientation=N
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #000000"
+String1=0x04,Railway Narrow Gauge
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f0d
+UseOrientation=N
+Xpm="32 18 2  1"
+"! c #C0C0C0"
+"  c none"
+"!!!!    !!!!    !!!!    !!!!    "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"!!!!    !!!!    !!!!    !!!!    "
+;12345678901234567890123456789012
+String1=0x04,Road Tunnel
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f0e
+UseOrientation=N
+Xpm="32 10 2  1"
+"! c #C0C0C0"
+"  c none"
+"!!!!    !!!!    !!!!    !!!!    "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"!!!!    !!!!    !!!!    !!!!    "
+;12345678901234567890123456789012
+String1=0x04,Road Tunnel
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f0f
+UseOrientation=N
+Xpm="32 6 2  1"
+"! c #C0C0C0"
+"  c none"
+"!!!     !!!     !!!     !!!     "
+"                                "
+"                                "
+"                                "
+"                                "
+"!!!     !!!     !!!     !!!     "
+;12345678901234567890123456789012
+String1=0x04,Road Tunnel
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f10
+UseOrientation=N
+Xpm="32 4 2  1"
+"! c #C0C0C0"
+"  c none"
+"!!!!    !!!!    !!!!    !!!!    "
+"                                "
+"                                "
+"!!!!    !!!!    !!!!    !!!!    "
+;12345678901234567890123456789012
+String1=0x04,Road Tunnel
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f11
+UseOrientation=Y
+Xpm="32 5 2  1"
+"! c #F72F99"
+"  c none"
+"            !               !   "
+" !!!!!!!   !!!   !!!!!!!   !!!  "
+"!!!!!!!!! !!!!! !!!!!!!!! !!!!! "
+" !!!!!!!   !!!   !!!!!!!   !!!  "
+"            !               !   "
+;12345678901234567890123456789012
+String1=0x04,Bridleway
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f12
+UseOrientation=N
+Xpm="32 2 2  1"
+"! c #F72F99"
+"  c none"
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+"!!  !!  !!  !!  !!  !!  !!  !!  "
+;12345678901234567890123456789012
+String1=0x04,Track
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10f13
+UseOrientation=N
+Xpm="32 13 2  1"
+"! c #000000"
+"  c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x04,Bridge
+ExtendedLabels=N
+[end]
+
+
+;====================== POINTS ==========================
+
+
+[_point]
+Type=0x014
+SubType=0x01
+String1=0x04,Motorway Junction
+ExtendedLabels=N
+DayXpm="8 8 8 1"   Colormode=16
+"!	c #003020"
+"#	c #003041"
+"%	c #006541"
+"?	c #737373"
+"$	c #D5D5D5"
+"*	c #E6E6E6"
+"=	c #00CAFF"
+"1	c #FFFFFF"
+"1*?!!?*1"
+"*%====#$"
+"?======?"
+"!======%"
+"!======%"
+"?======?"
+"*#====!$"
+"1$?%%?$1"
+;12345678
+[end]
+
+
+[_point]
+Type=0x02c
+SubType=0x02
+String1=0x04,Heritage Site
+ExtendedLabels=N
+DayXpm="16 16 6 1"   Colormode=16
+"!	c #FFFFFF"
+"#	c #101010"
+"%	c #A4A4A4"
+"?	c #838383"
+"$	c #D5D5D5"
+"  	c none"
+"       !        "
+"      ?#?       "
+"      ?#?       "
+"      %#%       "
+"      %#%       "
+"      $#$       "
+" ??%%$$#$$%%??  "
+" #############! "
+" ??%%$$#$$%%??  "
+"      $#$       "
+"      %#%       "
+"      %#%       "
+"      ?#?       "
+"      ?#?       "
+"       !        "
+"                "
+;1234567890123456
+[end]
+
+
+[_point]
+Type=0x02c
+SubType=0x05
+String1=0x04,School
+ExtendedLabels=N
+DayXpm="16 16 8 1"   Colormode=16
+"!	c #202020"
+"#	c #414141"
+"%	c #737373"
+"?	c #949494"
+"$	c #C5C5C5"
+"*	c #D5D5D5"
+"=	c #E6E6E6"
+"  	c none"
+"                "
+"                "
+"                "
+"           %$   "
+"=#!!#      !%   "
+"?!==? =#!% !%#%="
+"$!!%$=#!?% !!#!*"
+" $%!! !?   !?*!*"
+"??*%! !#$? !?*!*"
+"$!!!$ *#!# #?*#*"
+"                "
+"                "
+"                "
+"                "
+"                "
+"                "
+;1234567890123456
+[end]
+
+
+[_point]
+Type=0x02c
+SubType=0x0b
+String1=0x04,Place of Worship
+ExtendedLabels=N
+DayXpm="16 16 3 1"   Colormode=16
+"!	c #FFFFFF"
+"#	c #101010"
+"  	c none"
+"       ##       "
+"     !!##!!     "
+"     ######     "
+"     ######     "
+"       ##       "
+"       ## !!    "
+"   !########!   "
+"   ##########   "
+"   ##########   "
+"   ##########   "
+"   ##########!  "
+"   ##########   "
+"   ##########   "
+"   ##########   "
+"   ##########   "
+"   !########!   "
+;1234567890123456
+[end]
+
+
+[_point]
+Type=0x02f
+SubType=0x08
+String1=0x04,
+ExtendedLabels=N
+DayXpm="16 16 8 1"   Colormode=16
+"!	c #390020"
+"#	c #525252"
+"%	c #BD306A"
+"?	c #737373"
+"$	c #FF308B"
+"*	c #C5C5C5"
+"=	c #E6E6E6"
+"  	c none"
+"   =*?!!!!?*    "
+" = #!%$$$$%!#   "
+"  !!$$$$$$$$!!= "
+"=#!$$$$$$$$$$## "
+"*!$$$$$$$$$$$$!*"
+"?%$$$$$$$$$$$$%#"
+"!$$$$$$$$$$$$$$!"
+"!$$$$$$$$$$$$$$!"
+"!$$$$$$$$$$$$$$!"
+"!$$$$$$$$$$$$$$!"
+"?%$$$$$$$$$$$$%#"
+"*!$$$$$$$$$$$$!*"
+" #!$$$$$$$$$$#? "
+"  !#$$$$$$$$##=="
+"  =#!%$$$$%!?=  "
+"    *#!!!!#* =  "
+;1234567890123456
+[end]
+
+
+[_point]
+Type=0x030
+SubType=0x01
+String1=0x04,Police Station
+ExtendedLabels=N
+DayXpm="32 16 8 1"   Colormode=16
+"!	c #202020"
+"#	c #525252"
+"%	c #737373"
+"?	c #838383"
+"$	c #A4A4A4"
+"*	c #B4B4B4"
+"=	c #E6E6E6"
+"  	c none"
+"                                "
+"                                "
+"                              =="
+"                                "
+"#!!!%=       =!# %!=            "
+"!!?#!% ==$*= =!% ==  ==$*= =**= "
+"!# =!# %!#!# =!% %!= #!#!*=!!!!*"
+"!!#!!$=!# %!*=!% ?!==!# ==?!**!!"
+"!!#%*==!# ?!$=!% ?!=*!?   %!###%"
+"!#    =!!*#!*=!% ?!==!!*$=$!?=*$"
+"!#=    *!!!$ =!# %!= $!!!= %!!!?"
+"         =             =     =  "
+"                                "
+"                                "
+"                                "
+"                                "
+;12345678901234567890123456789012
+[end]
+
+
+[_point]
+Type=0x030
+SubType=0x02
+String1=0x04,Hospital
+ExtendedLabels=N
+DayXpm="24 16 8 1"   Colormode=16
+"!	c #202020"
+"#	c #414141"
+"%	c #525252"
+"?	c #838383"
+"$	c #B4B4B4"
+"*	c #C5C5C5"
+"=	c #E6E6E6"
+"  	c none"
+"                        "
+"                        "
+"                        "
+"                        "
+"%? *#*                  "
+"!% $!$  $?* = $?* **=?= "
+"!#$?!$=#!#!? !!#!=%!!!!="
+"!!!!!$*!? %!=!#?= %! $!="
+"!% $!$*!$ %!=?#!!=%! $!="
+"!% $!$=!#$!#*#$%!*%!?!!="
+"%? *%* *%#? =%##$ %!%%* "
+"         =    ==  %! =  "
+"                  **    "
+"                        "
+"                        "
+"                        "
+;123456789012345678901234
+[end]

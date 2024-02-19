@@ -17,29 +17,36 @@ merged_output = f'{output_dir}/merged.osm.pbf'
 
 sorted_output='/opt/dev/bikepackmaps/build/data/bikepack_osm_sorted.osm.pbf'
 # Split the file up into tiles for processing and then create the map
-splitter = Splitter(output_dir=splitter_dir,
-                    input_file=sorted_output,
-                    num_tiles=10
-                    )
-splitter.run()
+#splitter = Splitter(output_dir=splitter_dir,
+#                    input_file=sorted_output,
+#                    max_nodes=1600000,
+#                    search_limit=500000,
+#                    precomp_sea='./build/data/sea/sea-latest.zip'
+#                    )
+#splitter.run()
 
 make_map = Mkgmap(
-             style_file=styles_dir,
-             style='bikepack',
-             gmapsupp=None,
-             output_dir=f'{output_dir}/Garmin',
-             typ_file=typ_file,
-             keep_going=None,
-             split_name_index=None,
-             merge_lines=None,
-             index=None,
-             nsis=None,
-             draw_priority='31',
-             location_autofill='is_in,nearest',
-             generate_sea=None,
-             precomp_sea=precomp_sea,
-             bounds=bounds,
-             # Note well that this has to be the last argument otherwise all those before it are ignored
-             read_config=f'{splitter_dir}/template.args',)
+              style_file=styles_dir,
+              style='bikepack',
+              gmapsupp=None,
+              mapname=99005512,
+              family_name='Daves Bikepack Maps',
+              series_name='Daves Bikepack Maps',
+              country_name='United Kingdom',
+              country_abbr='UK',
+              output_dir=f'{output_dir}/Garmin',
+              typ_file=typ_file,
+              keep_going=None,
+              split_name_index=None,
+              merge_lines=None,
+              index=None,
+              nsis=None,
+              draw_priority='31',
+              location_autofill='is_in,nearest',
+              generate_sea=None,
+              precomp_sea=precomp_sea,
+              bounds=bounds,
+              # Note well that this has to be the last argument otherwise all those before it are ignored
+              read_config=f'{splitter_dir}/template.args',)
 
 make_map.run()
